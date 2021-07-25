@@ -39,17 +39,18 @@ export class HeremapComponent implements OnInit, AfterViewInit {
 
     const behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
 
-    const ui = H.ui.UI.createDefault(map, maptypes,'de-DE');
+    const ui = H.ui.UI.createDefault(map, maptypes);
     const mapSettings = ui.getControl('mapsettings');
     const zoom = ui.getControl('zoom');
     const scalebar = ui.getControl('scalebar');
 
     mapSettings.setAlignment('top-left');
-    const bubble = new H.ui.InfoBubble({lng: 13.3, lat:52.51},{
-      content: '<b>Hello world</b>'
+    const bubble = new H.ui.InfoBubble({lng: 13.4, lat:55.51}, {
+      content: '<b>Hello world. Its working</b>'
     });
     ui.addBubble(bubble);
-    console.log(map);
+
+    console.log(map);/*  */
 
   }
 
